@@ -1,0 +1,24 @@
+<div class="grid">
+
+    <h3 id="headline">Редактирование профиля</h3>
+
+    <img id="pic" src="./assets/images/nopic.jpeg">
+
+    <button id="uploadImageButton" mat-button>Загрузить аватарку</button>
+
+      <div id="name">
+
+    <label>Ваше имя*:</label>
+    <input class="input-group__input" type="text" placeholder="&nbsp;" autocomplete="off" required value="{{user?.name}}" />
+
+      </div>
+
+        <div id="secondname">
+
+    <label>Фамилия*:</label>
+    <input class="input-group__input" type="text" placeholder="&nbsp;" autocomplete="off" required value="{{user?.secondname}}" />
+
+      </div>
+      <button id="saveButton" mat-button class="save">Сохранить</button>
+
+ </div>

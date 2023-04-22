@@ -1,0 +1,26 @@
+.grid{
+    display: grid;
+  min-height: 100vh;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns:1fr;
+  grid-template-rows: 64px 1fr auto;
+  position: relative;
+  background-color: #e3e6e6;
+  }
+  
+  #header {
+    grid-area: header;
+  }
+  
+  #main {
+    grid-area: main;
+  }
+  
+  #footer {
+    padding-top: 50px;
+    grid-area: footer;
+  }
+  
