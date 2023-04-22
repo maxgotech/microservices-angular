@@ -19,7 +19,6 @@ export class HeaderUiComponent {
   constructor(public dialog: MatDialog, private authService: AuthService) {
   }  
 
-
   openLog() {
     const dialogRef = this.dialog.open(LoginUiComponent);
 

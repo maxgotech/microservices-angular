@@ -14,7 +14,13 @@ import { HeaderModule } from 'src/app/view/header/header.module';
     CommonModule,
     FooterModule,
     HeaderModule,
-    RouterModule
+    RouterModule.forChild([
+      {
+          path: '',
+          pathMatch: 'full',
+          component: HomePageComponent
+      }
+    ])
   ]
 })
 export class HomeModule { }

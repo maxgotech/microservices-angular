@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthPageComponent } from './pages/auth-page/auth-page.component';
-
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -9,7 +9,14 @@ import { AuthPageComponent } from './pages/auth-page/auth-page.component';
     AuthPageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild([
+      {
+          path: '',
+          pathMatch: 'full',
+          component: AuthPageComponent
+      }
+    ])
   ]
 })
 export class AuthModule { }
