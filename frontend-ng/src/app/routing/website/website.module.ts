@@ -10,6 +10,18 @@ const routes: Routes = [
     },
 
     {
+      path: 'admin',
+      loadChildren: () => import('./routing/admin/admin.module') 
+      .then(module=> module.AdminModule)
+    },
+
+    {
+      path: 'home',
+      loadChildren: () => import('./routing/home/home.module') 
+      .then(module=> module.HomeModule)
+    },
+
+    {
       path: 'not-found',
       loadChildren: () => import('./routing/not-found/not-found.module') 
       .then(module=> module.NotFoundModule)

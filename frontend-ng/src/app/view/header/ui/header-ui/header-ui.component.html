@@ -1,0 +1,28 @@
+<header class="header sticky grid" id="header">
+
+    <h1 [routerLink]="['/']" id="logo">LAB</h1>
+  
+    <div class="topnav" id="topnav">
+      <a>Каталог</a>
+    </div>
+  
+    <div id="searchbar" class="wrap">
+     <div class="search">
+        <input type="text" class="searchTerm" placeholder="Что вы хотите найти?">
+        <button type="submit" class="searchButton">
+          <mat-icon>search</mat-icon>
+       </button>
+     </div>
+  </div>
+  
+    <div id="create">
+      <a [routerLink]="['/teaching']" >Преподавание</a>
+    </div>
+   
+    <div id="log" class="topnav">
+    <a *ngIf="!loggedIn" (click)="openLog()">Войти</a>
+      <app-user-card-block *ngIf="loggedIn"></app-user-card-block>
+    </div>
+  
+  </header>
+  
