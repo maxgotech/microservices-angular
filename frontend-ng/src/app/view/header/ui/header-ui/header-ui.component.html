@@ -10,6 +10,12 @@
        </button>
      </div>
   </div>
+  
+    <div id="cart">
+      <a [routerLink]="['']" >
+        <i><mat-icon>shopping_cart</mat-icon></i>
+      </a>
+    </div>
    
     <div id="log" class="topnav">
     <a *ngIf="!loggedIn" (click)="openLog()">Войти</a>

@@ -1,20 +1,34 @@
 {  
   "/api": {
-    "target": "http://localhost:3000",
+    "target": "http://localhost:8000",
     "secure": false  
   },
   "/auth": {
-    "target": "http://localhost:3000/auth/",
+    "target": "http://localhost:8000/auth/",
     "secure": false,
     "pathRewrite": { 
       "^/auth": ""
     }  
   },
   "/reg": {
-    "target": "http://localhost:3000/reg/",
+    "target": "http://localhost:8000/reg/",
     "secure": false,
     "pathRewrite": { 
       "^/reg": ""
+    }  
+  },
+  "/login": {
+    "target": "http://localhost:8000/login/",
+    "secure": false,
+    "pathRewrite": { 
+      "^/login": ""
+    }  
+  },
+  "/user/data": {
+    "target": "http://localhost:8000/user/data",
+    "secure": false,
+    "pathRewrite": { 
+      "^/user/data": ""
     }  
   }
 }

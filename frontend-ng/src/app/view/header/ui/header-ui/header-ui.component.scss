@@ -3,7 +3,7 @@
 .grid{
   display: grid;
   grid-template-areas: 
-    "logo searchbar log";
+    "logo searchbar cart log";
   grid-template-rows: 64px;
   grid-template-columns: auto 60% auto;
   margin: 0;
@@ -20,6 +20,12 @@
 #searchbar{
   grid-area: searchbar;
   width: 100%;
+}
+
+#cart{
+  margin-top: 3px;
+  padding-left: 10px;
+  grid-area: cart;
 }
 
 #log{
