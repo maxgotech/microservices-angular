@@ -1,5 +1,5 @@
 <button mat-stroked-button [matMenuTriggerFor]="menu" ng-init class="button-img" >
-    <img src="./assets/images/MulderSample.jpeg" alt="buttonpng" border="0" />
+    <i><mat-icon>menu</mat-icon></i>
   </button>
 
 <mat-menu class="menu" #menu="matMenu">
@@ -13,10 +13,6 @@
   <button class="button-style" mat-menu-item [routerLink]="['/user-profile']" >
       <mat-icon class="text-style">dashboard</mat-icon>
       <span class="text-style">Профиль</span>
-  </button>
-  <button class="button-style" mat-menu-item>
-      <mat-icon class="text-style">dashboard</mat-icon>
-      <span class="text-style">Мои курсы</span>
   </button>
 </div>
   <mat-divider></mat-divider>
