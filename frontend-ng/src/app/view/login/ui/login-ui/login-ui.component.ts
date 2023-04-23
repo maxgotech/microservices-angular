@@ -30,6 +30,7 @@ export class LoginUiComponent implements OnInit {
   }
 
   openReg() {
+    this.dialog.closeAll();
     const dialogRef = this.dialog.open(RegUiComponent);
 
     dialogRef.afterClosed().subscribe(result => {
@@ -51,7 +52,7 @@ export class LoginUiComponent implements OnInit {
     this.authService.login(this.mail,this.password).subscribe(data => 
       { if(data.type=='user')
       {
-        this.dialog.closeAll();
+        window.location.reload();
       } else {
         this.router.navigate(['/admin']);
         this.dialog.closeAll();

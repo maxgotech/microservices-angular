@@ -4,6 +4,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { RouterModule } from '@angular/router';
 import { FooterModule } from 'src/app/view/footer/footer.module';
 import { HeaderModule } from 'src/app/view/header/header.module';
+import { MainHomeModule } from 'src/app/view/main-home/main-home.module';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { HeaderModule } from 'src/app/view/header/header.module';
     CommonModule,
     FooterModule,
     HeaderModule,
+    MainHomeModule,
     RouterModule.forChild([
       {
           path: '',

@@ -50,7 +50,7 @@ export class RegUiComponent implements OnInit {
     this.secondname =(<HTMLInputElement>document.getElementById("SecondNameInput")).value;
     this.mail =(<HTMLInputElement>document.getElementById("MailInput")).value;
     this.password =(<HTMLInputElement>document.getElementById("PassInput")).value;
-    this.regService.register(this.name,this.secondname,this.mail,this.password).subscribe(data => console.log("you are registered"))
+    this.regService.register(this.name,this.secondname,this.mail,this.password).subscribe(data => console.log(this.mail))
   }
 
 }
