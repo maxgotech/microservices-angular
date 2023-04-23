@@ -44,5 +44,19 @@
     "pathRewrite": { 
       "^/product/productlist": ""
     }  
+  },
+  "/cart/newcart": {
+    "target": "http://localhost:8000/cart/newcart",
+    "secure": false,
+    "pathRewrite": { 
+      "^/cart/newcart": ""
+    } 
+  },
+  "/cart/cartlist": {
+    "target": "http://localhost:8000/cart/cartlist",
+    "secure": false,
+    "pathRewrite": { 
+      "^/cart/cartlist": ""
+    } 
   }
 }

@@ -14,6 +14,11 @@ const routes: Routes = [
       loadChildren: () => import('./routing/admin/admin.module') 
       .then(module=> module.AdminModule)
     },
+    {
+      path: 'cart',
+      loadChildren: () => import('./routing/cart/cart.module') 
+      .then(module=> module.CartModule)
+    },
 
     {
       path: 'user-profile',

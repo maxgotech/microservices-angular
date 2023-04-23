@@ -1,0 +1,13 @@
+<div class="gridCarts">
+
+    <h2 id="headline"><b>Корзина</b></h2>
+
+    <div id="CartList" >
+    <div class="card" *ngFor="let cart of carts"  >
+        <div class="container">
+            <h4><b>{{cart.name}}</b></h4>
+            <p>{{cart.price}}</p>
+        </div>
+    </div>
+</div>
+</div>
