@@ -30,5 +30,19 @@
     "pathRewrite": { 
       "^/user/data": ""
     }  
+  },
+  "/product/newproduct": {
+    "target": "http://localhost:8001/product/newproduct",
+    "secure": false,
+    "pathRewrite": { 
+      "^/product/newproduct": ""
+    }  
+  },
+  "/product/productlist": {
+    "target": "http://localhost:8001/product/productlist",
+    "secure": false,
+    "pathRewrite": { 
+      "^/product/productlist": ""
+    }  
   }
 }

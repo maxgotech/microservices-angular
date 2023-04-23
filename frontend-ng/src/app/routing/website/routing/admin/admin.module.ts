@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AdminHeaderModule } from 'src/app/view/admin-header/admin-header.module';
 import { FooterModule } from 'src/app/view/footer/footer.module';
 import { MatDialogModule } from '@angular/material/dialog';
+import { AdminHomeModule } from 'src/app/view/admin-home/admin-home.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     AdminHeaderModule,
     FooterModule,
     MatDialogModule,
+    AdminHomeModule,
     RouterModule.forChild([
       {
           path: '',

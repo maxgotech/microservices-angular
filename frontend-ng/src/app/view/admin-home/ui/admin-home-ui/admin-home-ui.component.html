@@ -1,0 +1,16 @@
+<div class="gridProducts">
+
+    <h2 id="headline"><b>Товары</b></h2>
+    <input id="nameInput" class="input-group__input" type="text" placeholder="Введите название товара*" autocomplete="off" required />
+    <input id="priceInput" class="input-group__input" type="number" placeholder="Введите цену*" autocomplete="off" required />
+    <button (click)="createProduct()"  id="BCreate" mat-button class="save">Создать</button>
+
+    <div id="ProductList" >
+    <div class="card" *ngFor="let product of products"  [routerLink]="['/product', product.id]"  >
+        <div class="container">
+            <h4><b>{{product.name}}</b></h4>
+            <p>{{product.price}} рублей</p>
+        </div>
+    </div>
+</div>
+</div>
