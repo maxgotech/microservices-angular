@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { RegUiComponent } from 'src/app/view/reg/ui/reg-ui/reg-ui.component';
 import { AuthService } from 'src/app/services/auth/auth-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-ui',
@@ -24,7 +25,7 @@ export class LoginUiComponent implements OnInit {
 
   @Input() formError = '';
 
-  constructor(public dialog: MatDialog, private authService : AuthService){
+  constructor(public dialog: MatDialog, private authService : AuthService, private router : Router){
     
   }
 
@@ -47,7 +48,16 @@ export class LoginUiComponent implements OnInit {
   log(){
     this.mail =(<HTMLInputElement>document.getElementById("MailInput")).value;
     this.password =(<HTMLInputElement>document.getElementById("PassInput")).value;
-    this.authService.login(this.mail,this.password).subscribe(data => window.location.reload())
+    this.authService.login(this.mail,this.password).subscribe(data => 
+      { if(data.type=='user')
+      {
+        this.dialog.closeAll();
+      } else {
+        this.router.navigate(['/admin']);
+        this.dialog.closeAll();
+      }
+      }
+    )
   }
 
 }

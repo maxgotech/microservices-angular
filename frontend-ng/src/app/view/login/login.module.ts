@@ -7,7 +7,6 @@ import { LoginUiComponent } from './ui/login-ui/login-ui.component';
 import { LoginBlockComponent } from './block/login-block/login-block.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
-import { MatDialogModule } from '@angular/material/dialog';
 import { RegModule } from '../reg/reg.module';
 
 
@@ -23,7 +22,6 @@ import { RegModule } from '../reg/reg.module';
     MatFormFieldModule,
     MatButtonModule,
     MatIconModule,
-    MatDialogModule,
     RegModule
   ],
   exports:[LoginBlockComponent]

@@ -7,6 +7,7 @@ export interface User {
 	accessToken: string;
 	expiresIn: Date;
 	mail: string;
+	type: string
 }
 
 @Injectable({

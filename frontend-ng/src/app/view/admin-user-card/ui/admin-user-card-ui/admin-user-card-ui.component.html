@@ -1,0 +1,26 @@
+<button mat-stroked-button [matMenuTriggerFor]="menu" ng-init class="button-img" >
+    <i><mat-icon>menu</mat-icon></i>
+  </button>
+
+<mat-menu class="menu" #menu="matMenu">
+  <div id="card-header">
+    <div class="text-style"><b>Вы вошли как:</b></div>
+          <div class="text-style">{{user?.name}} {{this.user?.secondname}}</div>
+          <div class="text-style">{{user?.mail}}</div>
+  </div>
+  <mat-divider></mat-divider>
+  <div id="card-nav">
+  <button class="button-style" mat-menu-item [routerLink]="['/sold-product']" >
+      <mat-icon class="text-style">dashboard</mat-icon>
+      <span class="text-style">Проданные товары</span>
+  </button>
+</div>
+  <mat-divider></mat-divider>
+  <div id="card-footer">
+      <button class="button-style" [routerLink]="['/']" mat-menu-item (click)="Logout()" >
+          <mat-icon class="text-style">exit_to_app</mat-icon>
+          <span class="text-style">Выход</span>
+      </button>
+
+  </div>
+</mat-menu>

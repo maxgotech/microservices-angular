@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.grid{
+  display: grid;
+  grid-template-areas: 
+    "logo searchbar log";
+  grid-template-rows: 64px;
+  grid-template-columns: auto 60% auto;
+  margin: 0;
+}
+
+#logo {
+  grid-area: logo;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-left: 10px;
+  cursor:pointer;
+}
+
+#searchbar{
+  grid-area: searchbar;
+  width: 100%;
+}
+
+#log{
+  margin-top: 7px;
+  grid-area: log;
+  width: fit-content;
+  background-color: #326ab4;
+}
+
+.header{
+  background-color: #326ab4;
+  /* #242e3e */
+  /* #131921 */
+  z-index: 500;
+}
+/* Style the header */
+.header h1{
+  margin-top: 5px;
+  margin-left: 10px;
+  font-size: 40px;
+  font-weight: 600;
+  background-image: linear-gradient(to bottom, #cccccc,#bababa, #545454);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add a background color to the top navigation */
+.topnav  {
+  overflow: hidden;
+  background-color: #131921;
+  margin-left: auto; 
+  margin-right: 7px;
+}
+
+/* Style the links inside the navigation bar */
+ a,button {
+  float: left;
+  color: #cccfcf;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  cursor:pointer;
+}
+
+/* Change the color of links on hover */
+ a:hover {
+  background-color: #143c7d;
+}
+
+
+/////////////// Search Bar /////////////
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #e3e6e6;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: black;
+}
+
+.searchButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 36px;
+  border: 1px solid #e3e6e6;
+  background: #e3e6e6;
+  color: black;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 4px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+////////////////////// 

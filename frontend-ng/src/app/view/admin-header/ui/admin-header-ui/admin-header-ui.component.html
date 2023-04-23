@@ -1,0 +1,19 @@
+<header class="header sticky grid" id="header">
+
+    <h1 [routerLink]="['/admin']" id="logo">Админ</h1>
+  
+    <div id="searchbar" class="wrap">
+     <div class="search">
+        <input type="text" class="searchTerm" placeholder="Что вы хотите найти?">
+        <button type="submit" class="searchButton">
+          <mat-icon>search</mat-icon>
+       </button>
+     </div>
+  </div>
+   
+    <div id="log" class="topnav">
+      <app-admin-user-card-block *ngIf="loggedIn"></app-admin-user-card-block>
+    </div>
+  
+  </header>
+  
