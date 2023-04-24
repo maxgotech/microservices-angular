@@ -31,17 +31,9 @@ export class CartUiComponent {
     });
   }
 
-  getProducts(){
-    this.productService.ReturnProducts().subscribe((data) => {
-    this.products = data;
-    })
-  }
-
   getCarts(id:number){
     this.cartService.ReturnCarts(id).subscribe((data) => {
-    this.getProducts();
     this.carts=data;
-    console.log(data);
     })
   }
 
