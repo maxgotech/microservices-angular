@@ -23,6 +23,7 @@ export class CartUiComponent {
   name: string | undefined; // название товара
   carts:any =[];
   products:any =[];
+  price:number=0;
 
   constructor( private authService: AuthService, private userService:UserService, private cartService:CartService, private productService:ProductService){
     this.userService.UserData(this.mail).subscribe((Response:User)=>{
@@ -34,7 +35,12 @@ export class CartUiComponent {
   getCarts(id:number){
     this.cartService.ReturnCarts(id).subscribe((data) => {
     this.carts=data;
-    })
+    this.price=0;
+    for (var dat of data){
+      this.price = this.price+dat.product.price;
+      console.log(this.price)
+    }
+    });
   }
 
   deleteCart(id:number){
