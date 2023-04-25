@@ -21,15 +21,18 @@ export class MainHomeUiComponent {
   products:any =[];
   product:number | undefined;
   user:User | undefined;
-  currentUser = this.authService.currentUserValue;
-  mail = this.currentUser.mail; // почта текущего пользователя
-
+  mail:string | undefined;
+  currentUser:any;
 
   constructor( private productService:ProductService,private authService: AuthService, private userService:UserService, private cartService:CartService){
-    this.userService.UserData(this.mail).subscribe((Response:User)=>{
-      this.user=Response; // UserDto текущего пользователя
-    })
     this.getProducts();
+    if(this.authService.currentUserValue!=null){
+    this.currentUser = this.authService.currentUserValue;
+    this.mail = this.currentUser.mail; // почта текущего пользователя
+    this.userService.UserData(this.mail!).subscribe((Response:User)=>{
+    this.user=Response; // UserDto текущего пользователя
+    })
+  } 
   }
 
   getProducts(){
