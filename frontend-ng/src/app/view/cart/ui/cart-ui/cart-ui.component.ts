@@ -38,7 +38,6 @@ export class CartUiComponent {
     this.price=0;
     for (var dat of data){
       this.price = this.price+dat.product.price;
-      console.log(this.price)
     }
     });
   }
