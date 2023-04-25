@@ -37,4 +37,11 @@ export class CartUiComponent {
     })
   }
 
+  deleteCart(id:number){
+    this.cartService.DeleteCart(id).subscribe((data)=>{
+      console.log('cart deleted');
+    })
+    this.getCarts(this.user!.id);;
+  }
+
 }

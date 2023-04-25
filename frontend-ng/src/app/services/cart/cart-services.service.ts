@@ -7,12 +7,16 @@ import { Injectable } from '@angular/core';
 export class CartService {
   constructor(private readonly http: HttpClient) { }
 
-  NewCart( product:number , id_user:number) {
-		return this.http.post<any>('/cart/newcart',{ product , id_user });
-	}
+    NewCart( product:number , id_user:number) {
+		    return this.http.post<any>('/cart/newcart',{ product , id_user });
+	  }
 
     ReturnCarts(id_user:number){
         return this.http.post<any>('/cart/cartlist', { id_user });
       }
+
+    DeleteCart(id:number){
+        return this.http.post<any>('/cart/deletecart', { id });
+    }
 
 }

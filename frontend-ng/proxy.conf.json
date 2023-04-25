@@ -58,5 +58,12 @@
     "pathRewrite": { 
       "^/cart/cartlist": ""
     } 
+  },
+  "/cart/deletecart": {
+    "target": "http://localhost:8000/cart/deletecart",
+    "secure": false,
+    "pathRewrite": { 
+      "^/cart/deletecart": ""
+    } 
   }
 }
