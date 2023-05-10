@@ -3,12 +3,22 @@
     <h2 id="headline"><b>Товары</b></h2>
     <input id="nameInput" class="input-group__input" type="text" placeholder="Введите название товара*" autocomplete="off" required />
 
-    <div id="ProductList" >
-    <div class="card" *ngFor="let product of products " (click)='createCart(product.id)'  >
-        <div class="container" >
-            <h4><b>{{product.name}}</b></h4>
-            <p>{{product.price}} рублей</p>
-        </div>
+    <div id="ProductList" class="row" >
+        <div class="container item" style="background: url({{product.url_image}});background-size: cover;" *ngFor="let product of products" >
+            <div class="overlay">
+              <div class = "items"></div>
+              <div class = "items head">
+                <p>{{product.name}}</p>
+                <hr>
+              </div>
+              <div class = "items price">
+                <p class="new">{{product.price}} рублей</p>
+                <p class="about">{{product.about}} </p>
+              </div>
+              <div class="items cart" >
+                <span class="addcart"  (click)="createCart(product.id)" >В корзину</span>
+            </div>
+          </div>
+          </div>
     </div>
-</div>
 </div>

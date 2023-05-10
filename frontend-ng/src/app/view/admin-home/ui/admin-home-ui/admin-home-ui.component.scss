@@ -4,10 +4,12 @@
       "headline"
       "nameInput"
       "priceInput"
+      "imageUrlInput"
+      "about"
       "BCreate"
       "ProductList"
       ;
-    grid-template-rows: 50px 40px 50px 40px auto;
+    grid-template-rows: 50px 40px 50px 50px 150px 50px auto;
     grid-template-columns: 1fr;
     grid-gap: 10px;
     justify-items: center;
@@ -28,6 +30,18 @@
   #priceInput{
     grid-area: priceInput;
     max-width: 100px;
+  }
+
+  #imageUrlInput{
+    grid-area: imageUrlInput;
+    max-width: 300px;
+  }
+
+  #about{
+    padding-top: 10px;
+    grid-area: about;
+    max-width: 400px;
+    min-height: 150px;
   }
 
   #BCreate{

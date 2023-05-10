@@ -21,6 +21,8 @@ export class AdminHomeUiComponent {
   mail = this.currentUser.mail; // почта текущего пользователя
   name: string | undefined; // название товара
   price: number | undefined; //цена товара
+  url_image:string | undefined; // путь к фото
+  about:string | undefined; //описание
   products:any =[];
 
   constructor( private authService: AuthService, private userService:UserService, private productService:ProductService){
@@ -39,7 +41,9 @@ export class AdminHomeUiComponent {
   createProduct(){
     this.name =(<HTMLInputElement>document.getElementById("nameInput")).value;
     this.price =(<HTMLInputElement>document.getElementById("priceInput")).valueAsNumber;
-    this.productService.NewProduct(this.name,this.price,this.user!.id).subscribe(data => console.log("study created"));
+    this.url_image =(<HTMLInputElement>document.getElementById("imageUrlInput")).value;
+    this.about =(<HTMLInputElement>document.getElementById("about")).value;
+    this.productService.NewProduct(this.name,this.price,this.user!.id,this.url_image,this.about).subscribe(data => console.log("study created"));
     this.userService.UserData(this.mail).subscribe((Response:User)=>{
     this.user=Response; // UserDto текущего пользователя
     this.getProducts();

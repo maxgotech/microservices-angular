@@ -7,8 +7,8 @@ import { Injectable } from '@angular/core';
 export class ProductService {
   constructor(private readonly http: HttpClient) { }
 
-  NewProduct(name:string, price:number , id_createdBy:number) {
-		return this.http.post<any>('/product/newproduct',{ name , price , id_createdBy });
+  NewProduct(name:string, price:number , id_createdBy:number, url_image:string, about:string) {
+		return this.http.post<any>('/product/newproduct',{ name , price , id_createdBy, url_image, about });
 	}
 
   ReturnProducts(){

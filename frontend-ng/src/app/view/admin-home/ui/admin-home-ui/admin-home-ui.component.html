@@ -3,6 +3,8 @@
     <h2 id="headline"><b>Товары</b></h2>
     <input id="nameInput" class="input-group__input" type="text" placeholder="Введите название товара*" autocomplete="off" required />
     <input id="priceInput" class="input-group__input" type="number" placeholder="Введите цену*" autocomplete="off" required />
+    <input id="imageUrlInput" class="input-group__input"  placeholder="Введите ссылку на фото" autocomplete="off" required />
+    <textarea id="about" class="input-group__input" placeholder="Описание товара( Максимум 255 символов)" autocomplete="off" required ></textarea>
     <button (click)="createProduct()"  id="BCreate" mat-button class="save">Создать</button>
 
     <div id="ProductList" >
